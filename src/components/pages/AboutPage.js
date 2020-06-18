@@ -5,9 +5,9 @@ import Menu from '../molecules/Menu'
 function AboutPage() {
   return (
     <>
-      <Menu />
       <div className="main">
-        <h1>AboutPage</h1>
+        <Menu />
+        <h1>About Page</h1>
       </div>
     </>
   )

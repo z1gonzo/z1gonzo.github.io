@@ -1,4 +1,4 @@
-.main {
+.App {
   height: 100vh;
   font-family: Cinzel, serif;
   display: flex;
@@ -18,17 +18,26 @@
   font-weight: normal;
 }
 
-.main .menu a:first-of-type {
+.home .menu {
+  position: absolute;
+  top: 90vh;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.home .menu a:first-of-type {
   display: none;
 }
 
 .menu {
   position: absolute;
-  top: 90vh;
-  bottom: 0;
-  right: 0;
+  top: 5vh;
   left: 0;
-  padding-bottom: 4rem;
+  right: 0;
+  text-align: right;
+  margin-right: 3vw;
 }
 
 a {

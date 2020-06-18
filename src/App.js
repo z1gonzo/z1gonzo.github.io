@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import './App.css'
 
 import Home from './components/pages/HomePage'
@@ -11,11 +11,13 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/works" component={Works} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/contact" component={Contact} />
-        {/* <Redirect to='/404' /> */}
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/works" component={Works} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Redirect to="/404" />
+        </Switch>
       </BrowserRouter>
     </div>
   )
