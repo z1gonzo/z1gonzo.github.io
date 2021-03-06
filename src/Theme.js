@@ -22,6 +22,12 @@ const GlobalStyleBody = createGlobalStyle`
   }
 `;
 
+const GlobalStyleLink = createGlobalStyle`
+  a {
+    color: ${(props) => props.theme.text}
+  }
+`;
+
 const GlobalStyleLinkVisited = createGlobalStyle`
   a:visited {
     color: ${(props) => props.theme.text}
@@ -33,6 +39,7 @@ const Theme = ({ children }) => {
   return (
     <ThemeProvider theme={themes[theme]}>
       <GlobalStyleBody />
+      <GlobalStyleLink />
       <GlobalStyleLinkVisited />
       {children}
     </ThemeProvider>
